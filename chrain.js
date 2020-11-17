@@ -35,7 +35,7 @@ const endLoad = () => {
 }
 
 function render(){
-    cx.fillStyle="rgba(0, 0, 0, 0.4)"
+    cx.fillStyle="rgba(0, 0, 0, 0.3)"
     cx.fillRect(0,0,w,h)
 }
 
@@ -87,7 +87,7 @@ class Fall{
     generateSym(x,y){
         let s = rand(7,25) 
         for(let i = 0; i<=this.totalSyms;i++){
-            let rCol = rand(0,5) ==1 ? "rgba(150,255,200)" : "rgba(0,200,50)"
+            let rCol = rand(0,5) ==1 ? "rgba(50,230,255)" : "rgba(50,255,230)"
            let sym = new Symbol(x, y, this.sp, rCol, s)
             sym.setRandSym()
             this.syms.push(sym)
