@@ -35,7 +35,7 @@ const endLoad = () => {
 }
 
 function render(){
-    cx.fillStyle="rgba(0, 0, 0, 0.9)"
+    cx.fillStyle="rgba(0, 0, 0)"
     cx.fillRect(0,0,w,h)
 }
 
