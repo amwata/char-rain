@@ -35,7 +35,7 @@ const endLoad = () => {
 }
 
 function render(){
-    cx.fillStyle="rgba(0, 0, 0, 0.3)"
+    cx.fillStyle="rgba(0, 0, 0, 0.9)"
     cx.fillRect(0,0,w,h)
 }
 
@@ -63,7 +63,7 @@ class Symbol{
         this.s = s
     }
     render(){
-        text(this.s, this.val, this.x, this.y, this.col)
+        text(cx,this.s, this.val, this.x, this.y, this.col)
         this.rain()
         this.setRandSym()
     }
@@ -105,9 +105,11 @@ function rand(x,y){
     return Math.round(Math.random() * (y-x)) + x;
 }
 
-function text(s,txt,x,y,col){
-    cx.fillStyle = col
-    cx.font = `${s}px lighter Aerial` 
-    cx.fillText(txt,x,y)
+function text(c,s,txt,x,y,col){
+    c.fillStyle = col
+    c.font = `${s}px lighter Aerial` 
+    c.shadowColor="#0ff";
+    c.shadowBlur=7;
+    c.fillText(txt,x,y)
 }
 
